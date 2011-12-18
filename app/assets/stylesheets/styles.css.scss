@@ -1,8 +1,25 @@
+/* For modern browsers */
+.cf:before,
+.cf:after {
+  content:"";
+  display:table;
+}
+
+.cf:after {
+  clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+  zoom:1;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: verdana;
   color: #333;
+  font-size: 16px;
 }
 
 h1 {
@@ -23,11 +40,12 @@ nav ul li {
 header {
   width: 960px;
   margin: auto;
+  padding: 35px;
 }
   header h1 {
     margin: 0;
-    padding: 35px;
     font-family: palatino;
+    float: left;
   }
   header h1 a {
     text-decoration: none;
@@ -38,3 +56,20 @@ header {
   header nav {
     float: right;
   }
+
+#content {
+  width: 960px;
+  margin: auto;
+  padding: 18px;
+}
+
+#footer-container {
+  background-color: #eeeeee;
+  height: 36px;
+}
+
+footer {
+  width: 960px;
+  margin: auto;
+  padding: 8px;
+}
