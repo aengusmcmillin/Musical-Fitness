@@ -52,5 +52,24 @@ describe User do
         invalid_email_user.should_not be_valid
       end
     end
+
+    it "rejects duplicate email addresses" do
+      User.create!(@attr)
+      user_with_duplicate_email = User.new(@attr.merge(:username => "nonduplicateusername"))
+      user_with_duplicate_email.should_not be_valid
+    end
+
+    it "rejects duplicate case insensitive email addresses" do
+      upcased_email = @attr[:email].upcase
+      User.create!(@attr.merge(:email => upcased_email, :username => "nonduplicateusername"))
+      user_with_duplicate_email = User.new(@attr)
+      user_with_duplicate_email.should_not be_valid
+    end
+
+    it "rejects duplicate usernames" do
+      User.create!(@attr)
+      user_with_duplicate_username = User.new(@attr.merge(:email => "nonduplicate@email.com"))
+      user_with_duplicate_username.should_not be_valid
+    end
   end
 end
