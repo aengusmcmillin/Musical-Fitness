@@ -18,7 +18,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   color: #000;
-  font-family: palatino;
 }
 
 h1 {font-size: 24px;}
@@ -31,6 +30,16 @@ div.field, div.actions {
   margin: 10px;
   margin-left: 0px;
 }
+
+#error_explanation {
+  margin: 20px;
+  border: 1px solid red;
+  padding: 20px;
+
+  ul li {
+    list-style: square inside;
+  }
+}
 /* END */
 
 /* HEADER */
@@ -38,6 +47,7 @@ div.field, div.actions {
   background-color: #333;
   height: 96px;
   margin-top: 0;
+  font-family: palatino;
 }
 header {
   width: 960px;
@@ -70,7 +80,7 @@ header {
 
 /* CONTENT */
 #content {
-  width: 960px;
+  width: 500px;
   margin: auto;
   padding: 18px;
 }
@@ -123,6 +133,10 @@ footer nav {
 /* For IE 6/7 (trigger hasLayout) */
 .cf {
   zoom:1;
+}
+
+.field_with_errors {
+  border: 2px solid red;
 }
 
 /* END */
