@@ -24,6 +24,7 @@ h1 {font-size: 24px;}
 
 nav ul li {
   display: inline;
+  float: left;
 }
 
 div.field, div.actions {
@@ -73,7 +74,7 @@ header {
   }
   nav {
     float: right;
-    a {padding: 36px;}
+    a {padding: 36px;display: inline-block;}
   }
 }
 /* END */

@@ -46,7 +46,7 @@ describe SessionsController do
       end
 
       it "signs in the user" do
-
+        session[:user_id].should == @user.id
       end
 
       it "redirects to the home page" do
