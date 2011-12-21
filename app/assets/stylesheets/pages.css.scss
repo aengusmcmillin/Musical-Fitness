@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: verdana;
+  color: #333;
+}
+
+h1 {
+  line-height: 1.1;
+  font-size: 24px;
+  color: #000;
+}
+
+nav ul li {
+  display: inline;
+}
+
+#header-container {
+  background-color: #dddddd;
+  height: 96px;
+  margin-top: 0;
+}
+header {
+  width: 960px;
+  margin: auto;
+}
+  header h1 {
+    margin: 0;
+    padding: 35px;
+    font-family: palatino;
+  }
+  header h1 a {
+    text-decoration: none;
+  }
+  header h1 a:hover, header h1 a:visited {
+    color: #000;
+  }
+  header nav {
+    float: right;
+  }
