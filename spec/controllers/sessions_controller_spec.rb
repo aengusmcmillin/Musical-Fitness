@@ -46,13 +46,18 @@ describe SessionsController do
       end
 
       it "signs in the user" do
-        session[:user_id].should == @user.id
+        controller.current_user.should == @user
+        controller.should be_signed_in
       end
 
       it "redirects to the home page" do
         response.should redirect_to(root_path)
       end
     end
+  end
+
+  describe "#destroy" do
+
   end
 
 end

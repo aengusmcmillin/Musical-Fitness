@@ -3,7 +3,7 @@
     <h1><%= link_to "Musical Fitness", root_path %></h1>
     <nav>
       <ul>
-        <% if session[:user_id] %>
+        <% if signed_in? %>
           <li><%= link_to "Profile", "#" %></li>
           <li><%= link_to "Sign Out", signout_path %></li>
         <% else %>
